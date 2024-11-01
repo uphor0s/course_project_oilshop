@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OilShopApp.Pages.ManagerMainPage"
+             Title="ManagerMainPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:mynamespace="clr-namespace:OilShopApp.Views"
+             >
+    <VerticalStackLayout>
+        <ScrollView
+            Orientation="Horizontal"
+            HorizontalScrollBarVisibility="Default">
+            <HorizontalStackLayout Padding="10">
+                 <Button
+                            x:Name="employeeListBtn"
+                            Text="Работники"
+                            Clicked="employeeListBtn_Clicked"
+                            HorizontalOptions="Center"
+                            BackgroundColor="#303030"
+                            TextColor="White"
+                            FontSize="18"
+                            WidthRequest="220"
+                            
+                            Margin="10"/>
+                
+                 <Button
+                            x:Name="clientListBtn"
+                            Text="Клиенты"
+                            Clicked="clientListBtn_Clicked"
+                            HorizontalOptions="Center"
+                            BackgroundColor="#303030"
+                            TextColor="White"
+                            FontSize="18"
+                            WidthRequest="220"
+                            
+                            Margin="10"/>
+                 <Button
+                            x:Name="billListBtn"
+                            Text="История работ"
+                            Clicked="billListBtn_Clicked"
+                            HorizontalOptions="Center"
+                            BackgroundColor="#303030"
+                            TextColor="White"
+                            FontSize="18"
+                            WidthRequest="220"
+                            Margin="10"/>
+                <Button
+                            x:Name="carListBtn"
+                            Text="Автомобили"
+                            Clicked="carListBtn_Clicked"
+                            HorizontalOptions="Center"
+                            BackgroundColor="#303030"
+                            TextColor="White"
+                            FontSize="18"
+                            WidthRequest="220"
+                            Margin="10"/>
+                <Button
+                            x:Name="positionListBtn"
+                            Text="Должности"
+                            Clicked="positionListBtn_Clicked"
+                            HorizontalOptions="Center"
+                            BackgroundColor="#303030"
+                            TextColor="White"
+                            FontSize="18"
+                            WidthRequest="220"
+                            Margin="10"/>
+
+                <Button
+                            x:Name="operationListBtn"
+                            Text="Услуги"
+                            Clicked="operationListBtn_Clicked"
+                            HorizontalOptions="Center"
+                            BackgroundColor="#303030"
+                            TextColor="White"
+                            FontSize="18"
+                            WidthRequest="220"
+                            Margin="10"/>
+
+                
+
+                
+
+            </HorizontalStackLayout>
+
+        </ScrollView>
+        
+        
+        <ContentView x:Name="listView" VerticalOptions="Fill"/>
+            
+        
+        
+       </VerticalStackLayout>
+    
+   
+</ContentPage>

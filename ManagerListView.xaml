@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OilShopApp.Views.ManagerListView">
+
+    
+        <ContentView>
+        <Grid>
+           
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="*"/>
+
+              </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="65"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+           
+        <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                               
+            <Button
+                x:Name="editBtn"
+                Text="Редактировать"
+                Clicked="editBtn_Clicked"
+                HorizontalOptions="Start"
+                BackgroundColor="#303030"
+                TextColor="White"
+                FontSize="18"
+                WidthRequest="165"
+                Margin="10"/>
+
+            <Button
+                x:Name="deleteBtn"
+                Text="Удалить"
+                Clicked="deleteBtn_Clicked"
+                HorizontalOptions="StartAndExpand"
+                BackgroundColor="#303030"
+                TextColor="White"
+                FontSize="18"
+                WidthRequest="110"
+                Margin="10"/>
+
+            
+
+            <Button
+                x:Name="newBtn"
+                Text="Добавить"
+                Clicked="newBtn_Clicked"
+                HorizontalOptions="End"
+                BackgroundColor="#303030"
+                TextColor="White"
+                FontSize="18"
+                WidthRequest="110"
+                Margin="10"/>
+
+            <Label
+                x:Name="countLabel"
+                Text="Элем-в:"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                TextColor="White"
+                FontSize="18"
+                WidthRequest="110"
+                Margin="10"/>
+            
+
+
+        </HorizontalStackLayout>
+            
+
+            <Button
+                x:Name="refreshBtn"
+                Text="Обновить"
+                Clicked="refreshBtn_Clicked"
+                HorizontalOptions="End"
+                BackgroundColor="#303030"
+                TextColor="White"
+                FontSize="18"
+                WidthRequest="138"
+                Margin="10"
+                Grid.Column="1"/>
+            
+        
+        
+                    
+    <CollectionView SelectionMode="Single" x:Name="collection" EmptyView="Список пуст." SelectionChanged="collection_SelectionChanged" 
+                    Grid.Row="1"
+                    VerticalOptions="Fill"
+                    HorizontalOptions="Fill"
+                    Grid.ColumnSpan="2"
+                    SizeChanged="collection_SizeChanged">
+<CollectionView.ItemTemplate>
+    <DataTemplate>
+
+        <VerticalStackLayout Padding="10"
+                             HorizontalOptions="FillAndExpand">
+       <Frame CornerRadius="20"
+              BackgroundColor="#303030"
+              Padding="5">
+           <VerticalStackLayout Margin="15">
+          
+
+          
+           
+               <Label Text="{Binding DisplayName}"
+                  HorizontalTextAlignment="Start"
+                  FontSize="30"/>
+               <Grid>
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="*"/>
+
+              </Grid.ColumnDefinitions>
+           
+                              <VerticalStackLayout Margin="5">
+               <Label Text="{Binding Description1}"
+                  HorizontalTextAlignment="Start"
+                  FontSize="20"/>
+
+                <Label Text="{Binding Description2}"
+                  HorizontalTextAlignment="Start"
+                       FontSize="20"
+                       Margin="5"/>
+                    </VerticalStackLayout>
+              <VerticalStackLayout Grid.Column="1" Margin="5">
+                <Label Text="{Binding Additional1}"
+                  HorizontalTextAlignment="End"
+                       FontSize="20"/>
+                       <Label Text="{Binding Additional2}"
+                  HorizontalTextAlignment="End"
+                       FontSize="20"
+                              Margin="5"/>
+                  </VerticalStackLayout>
+                      </Grid>
+               </VerticalStackLayout>
+       </Frame>
+            </VerticalStackLayout>
+            
+    </DataTemplate>
+
+</CollectionView.ItemTemplate>
+    </CollectionView>
+            
+       </Grid>
+        </ContentView>
+</ContentView>
+

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OilShopApp.Pages.AddUserPage"
+             Title="RegPage"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout
+        Spacing="30"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+        <Label
+            Text="Регистрация нового клиента"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="38"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            WidthRequest="400"
+            HorizontalTextAlignment="Center"
+            Margin="0,0,0,20"
+            x:Name="titleLabel"/>
+    <HorizontalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Spacing="30">
+    <VerticalStackLayout>
+        <Label
+            Text="Логин"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+            FontSize="18"
+            HorizontalOptions = "Start"
+            Margin="0,0,0,10"/>
+        <Entry
+            x:Name="nickname"
+            BackgroundColor="Black"
+            TextColor="#919191"
+            FontSize="20"
+            WidthRequest="200"/>
+    </VerticalStackLayout>
+        <VerticalStackLayout>
+        <Label
+            Text="Пароль"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+            FontSize="18"
+            HorizontalOptions = "Start"
+            Margin="0,0,0,10"/>
+        <Entry
+            x:Name="password"
+            BackgroundColor="Black"
+            TextColor="#919191"
+            FontSize="20"
+            WidthRequest="200"
+            IsPassword="True"/>
+    </VerticalStackLayout>
+        <VerticalStackLayout>
+        <Label
+            Text="Номер телефона"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+            FontSize="18"
+            HorizontalOptions = "Start"
+            Margin="0,0,0,10"/>
+        <Entry
+            x:Name="phone"
+            BackgroundColor="Black"
+            TextColor="#919191"
+            FontSize="20"
+            WidthRequest="200"/>
+    </VerticalStackLayout>
+    <!--<Frame
+        BackgroundColor="Transparent"
+        WidthRequest="200"
+        BorderColor="Transparent"/>-->
+    </HorizontalStackLayout>
+<!----><!----><!----><!----><!---->
+    <HorizontalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Spacing="30">
+    <VerticalStackLayout>
+        <Label
+            Text="Фамилия"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+            FontSize="18"
+            HorizontalOptions = "Start"
+            Margin="0,0,0,10"/>
+        <Entry
+            x:Name="surname"
+            BackgroundColor="Black"
+            TextColor="#919191"
+            FontSize="20"
+            WidthRequest="200"/>
+    </VerticalStackLayout>
+        <VerticalStackLayout>
+        <Label
+            Text="Имя"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+            FontSize="18"
+            HorizontalOptions = "Start"
+            Margin="0,0,0,10"/>
+        <Entry
+            x:Name="name"
+            BackgroundColor="Black"
+            TextColor="#919191"
+            FontSize="20"
+            WidthRequest="200"/>
+    </VerticalStackLayout>
+    <VerticalStackLayout>
+        <Label
+            Text="Отчество"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+            FontSize="18"
+            HorizontalOptions = "Start"
+            Margin="0,0,0,10"/>
+        <Entry
+            x:Name="patronymic"
+            BackgroundColor="Black"
+            TextColor="#919191"
+            FontSize="20"
+            WidthRequest="200"
+            Placeholder="При наличии"
+            PlaceholderColor="#404040"/>
+    </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+<!----><!----><!----><!----><!----><!----><!---->
+        <HorizontalStackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Spacing="30">
+    <VerticalStackLayout>
+        <Label
+            Text="Паспортные данные"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+            FontSize="18"
+            HorizontalOptions = "Start"
+            Margin="0,0,0,10"/>
+        <Entry
+            x:Name="passport"
+            BackgroundColor="Black"
+            TextColor="#919191"
+            FontSize="20"
+            WidthRequest="200"
+            Placeholder="Без пробела"
+            PlaceholderColor="#404040"/>
+    </VerticalStackLayout>
+        
+    <Frame
+        BackgroundColor="Transparent"
+        WidthRequest="200"
+        BorderColor="Transparent"/>
+    <Frame
+        BackgroundColor="Transparent"
+        WidthRequest="200"
+        BorderColor="Transparent"/>
+        </HorizontalStackLayout>
+        <Button.Shadow>
+            <Shadow
+                Brush="#ACACAC"
+                Offset="0,0"
+                Radius="30"
+                Opacity="0.5" />
+        </Button.Shadow>
+         <Button
+            x:Name="RegBtn"
+            Text="Создать аккаунт"
+            Clicked="RegBtn_Clicked"
+            HorizontalOptions="Center"
+            BackgroundColor="#303030"
+            TextColor="White"
+            FontSize="18"
+            WidthRequest="220"   
+            Margin="0,20,0,0"/>
+         
+        
+        <Button
+            x:Name="openLoginBtn"
+            Text="Отмена"
+            BackgroundColor="Transparent"
+            TextColor="#404040"
+            HorizontalOptions="Center"
+            Margin="0,10,0,0"
+            Clicked="openLoginBtn_Clicked"
+            VerticalOptions="End"/>
+        <Frame
+            BackgroundColor="Transparent"
+            BorderColor="Transparent"
+            HeightRequest="100"
+            VerticalOptions="End"
+            />
+        </VerticalStackLayout>
+</ContentPage>
